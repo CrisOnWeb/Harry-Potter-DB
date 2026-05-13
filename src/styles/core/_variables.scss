@@ -1,0 +1,51 @@
+:root {
+  /* Fondos principales */
+  --color-bg-primary: #0a0e17;
+  --color-bg-card: #141a29;
+  --color-bg-filters: #101520;
+
+  /* Textos */
+  --color-text-primary: #f0f4f8;
+  --color-text-secondary: #aab8c2;
+
+  /* Acentos */
+  --color-accent-magic: #2d9a6c;
+  --color-accent-gold: #c9a063;
+  --color-reset-btn: #374151;
+
+  /* Casas Hogwarts */
+  /* Gryffindor rojo/oro */
+  --color-gryffindor: #740001;
+  /* Slytherin verde/plata */
+  --color-slytherin: #033807;
+  /* Ravenclaw azul/bronce */
+  --color-ravenclaw: #00165e;
+  /* Hufflepuff Amarillo/negro */
+  --color-hufflepuff: #e3a000;
+
+  /* Bordes */
+  --border-color-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Sombras */
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-magic-hover: 0 0 15px rgba(45, 154, 108, 0.5);
+  --shadow-input-focus: 0 0 8px rgba(201, 160, 99, 0.4);
+
+  /* Tamaño de texto */
+  --font-size-base: 1rem;
+  --font-size-h1: 2.5rem;
+  --font-size-card-title: 1.5rem;
+  --font-size-small: 0.875rem;
+
+  /* espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Radius */
+  --border-radius-card: 12px;
+  --border-radius-input: 8px;
+}
