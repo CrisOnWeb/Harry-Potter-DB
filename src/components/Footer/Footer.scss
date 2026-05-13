@@ -1,0 +1,33 @@
+.footer {
+  border-top: 1px solid var(--border-color-subtle);
+  background-color: var(--color-bg-primary);
+
+  &__inner {
+    padding-block: var(--spacing-lg);
+    padding-inline: var(--spacing-lg);
+  }
+
+  &__copy {
+    width: fit-content;
+    margin-inline: auto;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+  }
+
+  &__author {
+    display: inline-flex;
+    border-bottom: 2px solid transparent;
+    text-decoration-line: none;
+    color: var(--color-accent-gold);
+    font-weight: 500;
+    transition:
+      transform 0.2s ease-in,
+      border-bottom 0.4s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-bottom: 2px solid var(--color-accent-gold);
+    }
+  }
+}
