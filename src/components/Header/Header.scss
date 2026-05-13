@@ -1,0 +1,32 @@
+.header {
+  border: 1px solid var(--border-color-subtle);
+  background-color: var(--color-bg-primary);
+  color: var(--color-accent-gold);
+
+  &__inner {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: end;
+    padding-block: var(--spacing-md);
+    padding-inline: var(--spacing-lg);
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+
+    &--big {
+      position: relative;
+      font-size: 1.4em;
+      top: 0.04em;
+    }
+  }
+}
