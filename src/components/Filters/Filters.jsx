@@ -27,7 +27,11 @@ const Filters = ({ search, onSearchChange }) => {
           </h3>
         </div>
 
-        <form className="filters__form" aria-describedby={noticeID}>
+        <form
+          className="filters__form"
+          aria-describedby={noticeID}
+          onSubmit={(ev) => ev.preventDefault()}
+        >
           <p className="sr-only" id={noticeID}>
             This form automatically filter the results as you type or change any
             option.

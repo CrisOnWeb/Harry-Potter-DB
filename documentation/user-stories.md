@@ -67,7 +67,7 @@ PARA mantener una interfaz consistente
 
 ## HU-3 Filtrar personajes por nombre
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO buscar personajes por nombre  
@@ -75,33 +75,33 @@ PARA encontrar personajes concretos rápidamente
 
 ### Tareas
 
-- [ ] T1 Crear input de búsqueda
-      **Criterios de aceptación:**
+- [✔] T1 Crear input de búsqueda
+  **Criterios de aceptación:**
   - ✔ Existe un input accesible
   - ✔ Tiene label asociado
 
-- [ ] T2 Controlar el input mediante estado
-      **Criterios de aceptación:**
+- [✔] T2 Controlar el input mediante estado
+  **Criterios de aceptación:**
   - ✔ El valor del input está sincronizado con state
 
-- [ ] T3 Filtrar personajes dinámicamente
-      **Criterios de aceptación:**
+- [✔] T3 Filtrar personajes dinámicamente
+  **Criterios de aceptación:**
   - ✔ El listado cambia mientras escribo
   - ✔ Se usa filter()
 
-- [ ] T4 Ignorar mayúsculas y minúsculas
-      **Criterios de aceptación:**
+- [✔] T4 Ignorar mayúsculas y minúsculas
+  **Criterios de aceptación:**
   - ✔ La búsqueda funciona en ambos casos
 
-- [ ] T5 Evitar submit accidental
-      **Criterios de aceptación:**
+- [✔] T5 Evitar submit accidental
+  **Criterios de aceptación:**
   - ✔ Pulsar Enter no recarga la página
 
 ---
 
 ## HU-4 Mostrar mensaje sin resultados
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO recibir feedback cuando no haya coincidencias  
@@ -109,8 +109,8 @@ PARA entender que mi búsqueda no tiene resultados
 
 ### Tareas
 
-- [ ] T1 Mostrar mensaje vacío
-      **Criterios de aceptación:**
+- [✔] T1 Mostrar mensaje vacío
+  **Criterios de aceptación:**
   - ✔ Se muestra mensaje personalizado
   - ✔ Incluye el texto buscado
 

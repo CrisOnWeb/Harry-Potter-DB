@@ -12,7 +12,7 @@ const HomePage = ({ characters, search, onSearchChange }) => {
         <p className="hero__text">Explore the wizarding world</p>
       </header>
       <Filters search={search} onSearchChange={onSearchChange} />
-      <CharacterList characters={characters} />;
+      <CharacterList characters={characters} search={search} />;
     </>
   );
 };
