@@ -118,7 +118,7 @@ PARA entender que mi búsqueda no tiene resultados
 
 ## HU-5 Filtrar personajes por casa
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO filtrar personajes por casa  
@@ -126,20 +126,20 @@ PARA explorar personajes concretos de Hogwarts
 
 ### Tareas
 
-- [ ] T1 Crear select de casas
-      **Criterios de aceptación:**
+- [✔] T1 Crear select de casas
+  **Criterios de aceptación:**
   - ✔ Existe un select funcional
 
-- [ ] T2 Controlar casa seleccionada
-      **Criterios de aceptación:**
+- [✔] T2 Controlar casa seleccionada
+  **Criterios de aceptación:**
   - ✔ El valor del select está en state
 
-- [ ] T3 Filtrar personajes por casa
-      **Criterios de aceptación:**
+- [✔] T3 Filtrar personajes por casa
+  **Criterios de aceptación:**
   - ✔ Solo aparecen personajes de la casa seleccionada
 
-- [ ] T4 Establecer Gryffindor por defecto
-      **Criterios de aceptación:**
+- [✔] T4 Establecer Gryffindor por defecto
+  **Criterios de aceptación:**
   - ✔ La aplicación carga Gryffindor inicialmente
 
 ---

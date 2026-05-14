@@ -10,15 +10,20 @@ function App() {
   // SECCIÓN ESTADO
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState('');
+  const [house, setHouse] = useState('gryffindor');
 
   // SECCIÓN USE-EFFECT
   useEffect(() => {
-    getCharacters().then((data) => setCharacters(data));
-  }, []);
+    getCharacters(house).then((data) => setCharacters(data));
+  }, [house]);
 
   // SECCIÓN FUNCIONES DE EVENTOS
   const handleSearchChange = (value) => {
     setSearch(value);
+  };
+
+  const handleHouseChange = (value) => {
+    setHouse(value);
   };
 
   // SECCIÓN HELPERS
@@ -51,6 +56,8 @@ function App() {
                 characters={searchedCharacters}
                 search={search}
                 onSearchChange={handleSearchChange}
+                house={house}
+                onHouseChange={handleHouseChange}
               />
             }
           />

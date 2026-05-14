@@ -1,7 +1,7 @@
 import './Filters.scss';
 import { useId } from 'react';
 
-const Filters = ({ search, onSearchChange }) => {
+const Filters = ({ search, onSearchChange, house, onHouseChange }) => {
   const filtersID = useId();
   const noticeID = useId();
   return (
@@ -55,7 +55,14 @@ const Filters = ({ search, onSearchChange }) => {
             <label className="filters__label" htmlFor="house">
               House
             </label>
-            <select className="filters__select" name="house" id="house">
+            <select
+              className="filters__select"
+              name="house"
+              id="house"
+              value={house}
+              onChange={(ev) => onHouseChange(ev.target.value)}
+            >
+              <option value="all">All houses</option>
               <option value="gryffindor">Gryffindor</option>
               <option value="slytherin">Slytherin</option>
               <option value="ravenclaw">Ravenclaw</option>

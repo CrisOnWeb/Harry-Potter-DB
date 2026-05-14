@@ -12,8 +12,8 @@ const CharacterCard = ({ character }) => {
       />
       <div className="characters__info">
         <h4 className="characters__name">{character.name}</h4>
-        <p className="characters__species">{character.species}</p>
-        <p className="characters__house">{character.house}</p>
+        <p className="characters__species">{character.species || 'Unknown'}</p>
+        <p className="characters__house">{character.house || 'Unknown'}</p>
       </div>
     </Link>
   );

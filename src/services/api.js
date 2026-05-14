@@ -1,7 +1,11 @@
 import Default from '../assets/defaultCharacter.png';
 
-const getCharacters = () => {
-  return fetch('https://hp-api.onrender.com/api/characters/house/gryffindor')
+const getCharacters = (house) => {
+  return fetch(
+    house === 'all'
+      ? 'https://hp-api.onrender.com/api/characters'
+      : `https://hp-api.onrender.com/api/characters/house/${house}`
+  )
     .then((response) => {
       if (!response.ok) {
         throw new Error('Error en la petición');
