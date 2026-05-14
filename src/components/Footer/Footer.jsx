@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__inner central-column">
         <p className="footer__copy">
-          &copy;2026 Harry Potter DB &middot; Hecho con 🤍 por{' '}
+          &copy;2026 Harry Potter DB &middot; Made with 🤍 by{' '}
           <a
             className="footer__author"
             href="https://github.com/CrisOnWeb"

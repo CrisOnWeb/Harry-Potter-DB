@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react';
 import './App.scss';
+import Filters from './components/Filters/Filters';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 // import fetchData from '/services/api';
@@ -9,7 +10,14 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <h2>Character Directory</h2>
+        <header className="hero central-column">
+          <h2 className="hero__title">
+            <span className="hero__title--big">C</span>haracter{' '}
+            <span className="hero__title--big">D</span>irectory
+          </h2>
+          <p className="hero__text">Explore the wizarding world</p>
+        </header>
+        <Filters />
       </main>
       <Footer />
     </>

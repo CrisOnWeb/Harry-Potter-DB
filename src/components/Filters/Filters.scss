@@ -1,0 +1,107 @@
+.filters {
+  padding-block: var(--spacing-md);
+  padding-inline: var(--spacing-lg);
+
+  &__inner {
+    padding-block: var(--spacing-md);
+    border: 1px solid var(--border-color-subtle);
+    border-radius: var(--border-radius-card);
+    background-color: var(--color-bg-filters);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding-inline: var(--spacing-md);
+
+    padding-bottom: var(--spacing-sm);
+
+    &-text {
+      font-family: var(--font-heading);
+      color: var(--color-accent-gold);
+      text-transform: uppercase;
+    }
+
+    &-icon {
+      width: 22px;
+      height: auto;
+      color: var(--color-accent-gold);
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+
+    @media (width > 768px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: end;
+      gap: 0;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding-inline: var(--spacing-md);
+    border-right: 1px solid var(--border-color-subtle);
+  }
+
+  &__label {
+    font-size: 0.85rem;
+  }
+
+  &__search,
+  &__select {
+    padding-inline: var(--spacing-sm);
+    padding-block: var(--spacing-sm);
+    border: 1px solid var(--border-color-subtle);
+    border-radius: 5px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  &__reset-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding-inline: var(--spacing-lg);
+    padding-block: var(--spacing-sm);
+    margin-inline: var(--spacing-md);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-accent-gold);
+
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: var(--shadow-magic);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__reset-label {
+    color: var(--color-bg-primary);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__reset-icon {
+    width: 18px;
+    min-width: 18px;
+    height: auto;
+    color: var(--color-bg-primary);
+  }
+}
