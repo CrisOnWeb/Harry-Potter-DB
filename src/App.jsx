@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react';
 import './App.scss';
+import CharacterList from './components/CharacterList/CharacterList';
 import Filters from './components/Filters/Filters';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -18,6 +19,7 @@ function App() {
           <p className="hero__text">Explore the wizarding world</p>
         </header>
         <Filters />
+        <CharacterList />
       </main>
       <Footer />
     </>
