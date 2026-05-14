@@ -1,7 +1,7 @@
 import './HomePage.scss';
 import CharacterList from '../../CharacterList/CharacterList';
 import Filters from '../../Filters/Filters';
-const HomePage = ({ characters }) => {
+const HomePage = ({ characters, search, onSearchChange }) => {
   return (
     <>
       <header className="hero central-column">
@@ -11,7 +11,7 @@ const HomePage = ({ characters }) => {
         </h2>
         <p className="hero__text">Explore the wizarding world</p>
       </header>
-      <Filters />
+      <Filters search={search} onSearchChange={onSearchChange} />
       <CharacterList characters={characters} />;
     </>
   );

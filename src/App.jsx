@@ -7,16 +7,53 @@ import HomePage from './components/Pages/HomePage/HomePage';
 import getCharacters from './services/api';
 
 function App() {
+  // SECCIÓN ESTADO
   const [characters, setCharacters] = useState([]);
+  const [search, setSearch] = useState('');
+
+  // SECCIÓN USE-EFFECT
   useEffect(() => {
     getCharacters().then((data) => setCharacters(data));
   }, []);
+
+  // SECCIÓN FUNCIONES DE EVENTOS
+  const handleSearchChange = (value) => {
+    setSearch(value);
+  };
+
+  // SECCIÓN HELPERS
+  const normalizeText = (text) => {
+    return text
+      .toLowerCase() // Minúsculas
+      .trim(); // elimina espacios
+  };
+
+  const searchedText = normalizeText(search);
+
+  const searchedCharacters = !searchedText
+    ? // Si search está vacío, devuelvo todos los personajes
+      characters
+    : // Si no, filtro por el contenido de search
+      characters.filter((character) =>
+        // Recojo los personajes que coincidan
+        normalizeText(character.name).includes(searchedText)
+      );
+
   return (
     <>
       <Header />
       <main className="main">
         <Routes>
-          <Route index element={<HomePage characters={characters} />} />
+          <Route
+            index
+            element={
+              <HomePage
+                characters={searchedCharacters}
+                search={search}
+                onSearchChange={handleSearchChange}
+              />
+            }
+          />
         </Routes>
       </main>
       <Footer />

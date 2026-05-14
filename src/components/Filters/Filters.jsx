@@ -1,7 +1,7 @@
 import './Filters.scss';
 import { useId } from 'react';
 
-const Filters = () => {
+const Filters = ({ search, onSearchChange }) => {
   const filtersID = useId();
   const noticeID = useId();
   return (
@@ -26,6 +26,7 @@ const Filters = () => {
             Filters
           </h3>
         </div>
+
         <form className="filters__form" aria-describedby={noticeID}>
           <p className="sr-only" id={noticeID}>
             This form automatically filter the results as you type or change any
@@ -41,6 +42,8 @@ const Filters = () => {
               name="search"
               id="search"
               placeholder="Search a character..."
+              value={search}
+              onChange={(ev) => onSearchChange(ev.target.value)}
             />
           </div>
 

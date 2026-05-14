@@ -4,7 +4,7 @@
 
 ## HU-1 Mostrar listado de personajes
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO ver un listado de personajes  
@@ -12,30 +12,30 @@ PARA explorar la información de personajes del universo mágico
 
 ### Tareas
 
-- [ ] T1 Crear estructura principal de la aplicación
-      **Criterios de aceptación:**
+- [✔] T1 Crear estructura principal de la aplicación
+  **Criterios de aceptación:**
   - ✔ Existe un componente App
   - ✔ Existe una estructura semántica básica
 
-- [ ] T2 Realizar petición a la API
-      **Criterios de aceptación:**
+- [✔] T2 Realizar petición a la API
+  **Criterios de aceptación:**
   - ✔ Los datos se obtienen correctamente desde la API
   - ✔ No hay errores en consola
   - ✔ Se usa useEffect para la petición
 
-- [ ] T3 Guardar personajes en el estado
-      **Criterios de aceptación:**
+- [✔] T3 Guardar personajes en el estado
+  **Criterios de aceptación:**
   - ✔ Los personajes se almacenan en state
   - ✔ App controla el estado principal
 
-- [ ] T4 Pintar listado de personajes
-      **Criterios de aceptación:**
+- [✔] T4 Pintar listado de personajes
+  **Criterios de aceptación:**
   - ✔ Se usa map()
   - ✔ Cada personaje tiene key única
   - ✔ El listado se renderiza correctamente
 
-- [ ] T5 Crear tarjetas de personaje
-      **Criterios de aceptación:**
+- [✔] T5 Crear tarjetas de personaje
+  **Criterios de aceptación:**
   - ✔ Cada tarjeta muestra imagen
   - ✔ Cada tarjeta muestra nombre
   - ✔ Cada tarjeta muestra especie
@@ -44,7 +44,7 @@ PARA explorar la información de personajes del universo mágico
 
 ## HU-2 Mostrar imagen por defecto
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO ver una imagen alternativa cuando un personaje no tenga foto  
@@ -52,12 +52,12 @@ PARA mantener una interfaz consistente
 
 ### Tareas
 
-- [ ] T1 Detectar personajes sin imagen
-      **Criterios de aceptación:**
+- [✔] T1 Detectar personajes sin imagen
+  **Criterios de aceptación:**
   - ✔ Se comprueba si image está vacío
 
-- [ ] T2 Mostrar imagen fallback
-      **Criterios de aceptación:**
+- [✔] T2 Mostrar imagen fallback
+  **Criterios de aceptación:**
   - ✔ Se renderiza una imagen por defecto
   - ✔ La interfaz no se rompe
 
