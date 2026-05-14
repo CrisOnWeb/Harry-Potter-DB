@@ -1,7 +1,7 @@
 import './HomePage.scss';
 import CharacterList from '../../CharacterList/CharacterList';
 import Filters from '../../Filters/Filters';
-const HomePage = () => {
+const HomePage = ({ characters }) => {
   return (
     <>
       <header className="hero central-column">
@@ -12,7 +12,7 @@ const HomePage = () => {
         <p className="hero__text">Explore the wizarding world</p>
       </header>
       <Filters />
-      <CharacterList />;
+      <CharacterList characters={characters} />;
     </>
   );
 };

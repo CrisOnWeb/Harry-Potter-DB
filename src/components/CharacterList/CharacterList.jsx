@@ -2,7 +2,7 @@ import './CharacterList.scss';
 import { useId } from 'react';
 import CharacterCard from './CharacterCard';
 
-const CharacterList = () => {
+const CharacterList = ({ characters }) => {
   const charactersID = useId();
   return (
     <section
@@ -16,9 +16,11 @@ const CharacterList = () => {
           Characters
         </h3>
         <ul className="characters__list">
-          <li className="characters__card">
-            <CharacterCard />
-          </li>
+          {characters.map((character) => (
+            <li key={character.id} className="characters__card">
+              <CharacterCard character={character} />
+            </li>
+          ))}
         </ul>
       </div>
     </section>

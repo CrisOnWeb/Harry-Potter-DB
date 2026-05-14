@@ -49,7 +49,6 @@ const Filters = () => {
               House
             </label>
             <select className="filters__select" name="house" id="house">
-              <option value="all">All houses</option>
               <option value="gryffindor">Gryffindor</option>
               <option value="slytherin">Slytherin</option>
               <option value="ravenclaw">Ravenclaw</option>
