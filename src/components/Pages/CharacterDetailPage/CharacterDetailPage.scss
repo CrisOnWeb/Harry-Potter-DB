@@ -1,10 +1,10 @@
 .detail {
-  padding-block: var(--spacing-md);
+  padding-block: var(--spacing-lg);
   padding-inline: var(--spacing-lg);
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: var(--spacing-xxl);
     padding-block: var(--spacing-xl);
@@ -12,25 +12,41 @@
     border: 5px double var(--color-accent-gold);
     border-radius: var(--border-radius-card);
     background-color: var(--color-bg-card);
+
+    @media (width > 950px) {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 
   &__img {
-    align-self: center;
+    justify-self: center;
     width: 100%;
     max-width: 360px;
     aspect-ratio: 210 / 295;
     object-fit: cover;
     border-radius: var(--border-radius-card);
     border: 2px solid var(--color-accent-gold);
+
+    @media (width > 950px) {
+      align-self: center;
+    }
   }
 
   &__name {
     padding-bottom: var(--spacing-sm);
     color: var(--color-accent-gold);
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(201, 160, 99, 0.3);
+
+    @media (width < 375px) {
+      font-size: 1.5rem;
+    }
+
+    @media (width > 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   &__list {
@@ -53,6 +69,10 @@
     padding-bottom: var(--spacing-sm);
     color: var(--color-accent-gold);
     font-size: 1.25rem;
+
+    @media (width < 375px) {
+      font-size: 1rem;
+    }
   }
 
   &__value {

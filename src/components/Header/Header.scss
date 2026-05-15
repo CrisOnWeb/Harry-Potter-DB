@@ -9,6 +9,10 @@
     display: flex;
     gap: var(--spacing-sm);
     align-items: end;
+
+    @media (width < 375px) {
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -27,6 +31,10 @@
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.01em;
+
+    @media (width < 375px) {
+      font-size: 1.25rem;
+    }
 
     @media (width > 768px) {
       font-size: 1.7rem;

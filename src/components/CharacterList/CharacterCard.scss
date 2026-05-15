@@ -7,6 +7,12 @@
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+
+    @media (width < 400px) {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
   }
 
   &__img {
@@ -22,6 +28,13 @@
     flex-direction: column;
     justify-content: space-between;
     padding-block: var(--spacing-lg);
+
+    @media (width < 400px) {
+      gap: var(--spacing-sm);
+      justify-content: start;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__name {

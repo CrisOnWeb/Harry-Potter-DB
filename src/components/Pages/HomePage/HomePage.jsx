@@ -30,7 +30,7 @@ const HomePage = ({
         onGenderChange={onGenderChange}
         onResetFilters={onResetFilters}
       />
-      <CharacterList characters={characters} search={search} />;
+      <CharacterList characters={characters} search={search} />
     </>
   );
 };
