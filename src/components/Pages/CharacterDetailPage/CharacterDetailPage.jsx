@@ -21,7 +21,9 @@ const CharacterDetailPage = ({ getCharacterById }) => {
       </header>
 
       <article className="detail">
-        <div className="detail__inner central-column">
+        <div
+          className={`detail__inner central-column ${characterFound.house.toLocaleLowerCase()}`}
+        >
           <img
             className="detail__img"
             src={characterFound.image}
