@@ -11,6 +11,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState('');
   const [house, setHouse] = useState('gryffindor');
+  const [gender, setGender] = useState('all');
 
   // SECCIÓN USE-EFFECT
   useEffect(() => {
@@ -26,23 +27,38 @@ function App() {
     setHouse(value);
   };
 
+  const handleGenderChange = (value) => {
+    setGender(value);
+  };
+
   // SECCIÓN HELPERS
   const normalizeText = (text) => {
     return text
-      .toLowerCase() // Minúsculas
+      .toLocaleLowerCase() // minúsculas
       .trim(); // elimina espacios
   };
 
   const searchedText = normalizeText(search);
 
-  const searchedCharacters = !searchedText
-    ? // Si search está vacío, devuelvo todos los personajes
-      characters
-    : // Si no, filtro por el contenido de search
-      characters.filter((character) =>
-        // Recojo los personajes que coincidan
-        normalizeText(character.name).includes(searchedText)
-      );
+  const filteredCharacters = characters
+    .filter((character) => {
+      const matchesSearch = !searchedText
+        ? // Si search está vacío, devuelve true siempre (comprobación explícita aunque lo haga includes())
+          true
+        : // Si no, filtro por el contenido de search y devuelvo true si coinciden
+          normalizeText(character.name).includes(searchedText);
+
+      const matchesGender =
+        gender === 'all'
+          ? // Con 'all' devuelvo siempre true
+            true
+          : // Si no, filtro por el filtro y devuelvo true si coinciden
+            character.gender === gender;
+
+      // Solo devuelvo los personajes que cumplan ambas condiciones (ambos true)
+      return matchesSearch && matchesGender;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <>
@@ -53,11 +69,13 @@ function App() {
             index
             element={
               <HomePage
-                characters={searchedCharacters}
+                characters={filteredCharacters}
                 search={search}
                 onSearchChange={handleSearchChange}
                 house={house}
                 onHouseChange={handleHouseChange}
+                gender={gender}
+                onGenderChange={handleGenderChange}
               />
             }
           />

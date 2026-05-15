@@ -146,7 +146,7 @@ PARA explorar personajes concretos de Hogwarts
 
 ## HU-6 Filtrar personajes por género
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO filtrar personajes por género  
@@ -154,12 +154,12 @@ PARA acotar los resultados
 
 ### Tareas
 
-- [ ] T1 Crear select de género
-      **Criterios de aceptación:**
+- [✔] T1 Crear select de género
+  **Criterios de aceptación:**
   - ✔ Existe un select funcional
 
-- [ ] T2 Filtrar por género
-      **Criterios de aceptación:**
+- [✔] T2 Filtrar por género
+  **Criterios de aceptación:**
   - ✔ El listado cambia correctamente
 
 ---
@@ -202,8 +202,8 @@ PARA consultar información ampliada
       **Criterios de aceptación:**
   - ✔ Existen rutas funcionales
 
-- [ ] T2 Hacer tarjetas clicables
-      **Criterios de aceptación:**
+- [✔] T2 Hacer tarjetas clicables
+  **Criterios de aceptación:**
   - ✔ Cada tarjeta navega a detalle
 
 - [ ] T3 Crear componente CharacterDetail
@@ -302,8 +302,8 @@ PARA tener una mejor experiencia visual
   - ✔ Tablet funciona correctamente
   - ✔ Desktop funciona correctamente
 
-- [ ] T3 Implementar grid de tarjetas
-      **Criterios de aceptación:**
+- [✔] T3 Implementar grid de tarjetas
+  **Criterios de aceptación:**
   - ✔ Se usa CSS Grid
   - ✔ Las tarjetas se adaptan al ancho
 

@@ -1,7 +1,14 @@
 import './Filters.scss';
 import { useId } from 'react';
 
-const Filters = ({ search, onSearchChange, house, onHouseChange }) => {
+const Filters = ({
+  search,
+  onSearchChange,
+  house,
+  onHouseChange,
+  gender,
+  onGenderChange,
+}) => {
   const filtersID = useId();
   const noticeID = useId();
   return (
@@ -74,7 +81,13 @@ const Filters = ({ search, onSearchChange, house, onHouseChange }) => {
             <label className="filters__label" htmlFor="gender">
               Gender
             </label>
-            <select className="filters__select" name="gender" id="gender">
+            <select
+              className="filters__select"
+              name="gender"
+              id="gender"
+              value={gender}
+              onChange={(ev) => onGenderChange(ev.target.value)}
+            >
               <option value="all">All</option>
               <option value="female">Female</option>
               <option value="male">Male</option>
