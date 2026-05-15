@@ -1,4 +1,3 @@
-import './HomePage.scss';
 import CharacterList from '../../CharacterList/CharacterList';
 import Filters from '../../Filters/Filters';
 const HomePage = ({

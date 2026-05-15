@@ -4,7 +4,7 @@ import Default from '../../assets/defaultCharacter.png';
 
 const CharacterCard = ({ character }) => {
   return (
-    <Link className="characters__link">
+    <Link to={`/character/${character.id}`} className="characters__link">
       <img
         className="characters__img"
         src={character.image}
@@ -12,8 +12,8 @@ const CharacterCard = ({ character }) => {
       />
       <div className="characters__info">
         <h4 className="characters__name">{character.name}</h4>
-        <p className="characters__species">{character.species || 'Unknown'}</p>
-        <p className="characters__house">{character.house || 'Unknown'}</p>
+        <p className="characters__species">{character.species}</p>
+        <p className="characters__house">{character.house}</p>
       </div>
     </Link>
   );

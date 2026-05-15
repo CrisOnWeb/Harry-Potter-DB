@@ -4,6 +4,7 @@ import './App.scss';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import HomePage from './components/Pages/HomePage/HomePage';
+import CharacterDetail from './components/Pages/CharacterDetailPage/CharacterDetailPage';
 import getCharacters from './services/api';
 
 function App() {
@@ -66,6 +67,10 @@ function App() {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 
+  const getCharacterById = (id) => {
+    return characters.find((character) => character.id === id);
+  };
+
   return (
     <>
       <Header />
@@ -85,6 +90,10 @@ function App() {
                 onResetFilters={handleResetFilters}
               />
             }
+          />
+          <Route
+            path={'/character/:id'}
+            element={<CharacterDetail getCharacterById={getCharacterById} />}
           />
         </Routes>
       </main>

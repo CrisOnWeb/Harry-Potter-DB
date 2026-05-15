@@ -17,9 +17,9 @@ const getCharacters = (house) => {
         id: character.id,
         name: character.name,
         alternateNames: character.alternate_names,
-        species: character.species,
+        species: character.species || 'Unknown',
         gender: character.gender,
-        house: character.house,
+        house: character.house || 'Unknown',
         image: character.image || Default,
         alive: character.alive,
       }));
