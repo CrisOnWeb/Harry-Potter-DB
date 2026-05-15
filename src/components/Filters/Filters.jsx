@@ -8,6 +8,7 @@ const Filters = ({
   onHouseChange,
   gender,
   onGenderChange,
+  onResetFilters,
 }) => {
   const filtersID = useId();
   const noticeID = useId();
@@ -96,6 +97,7 @@ const Filters = ({
           <button
             className="filters__reset-btn"
             title="Reset the search fields"
+            onClick={() => onResetFilters()}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -166,7 +166,7 @@ PARA acotar los resultados
 
 ## HU-7 Resetear filtros
 
-**Estado:** [ ] pendiente
+**Estado:** [✔] pendiente
 
 COMO usuaria  
 QUIERO resetear los filtros  
@@ -174,12 +174,12 @@ PARA volver rápidamente al listado inicial
 
 ### Tareas
 
-- [ ] T1 Crear botón reset
-      **Criterios de aceptación:**
+- [✔] T1 Crear botón reset
+  **Criterios de aceptación:**
   - ✔ Existe un botón reset visible
 
-- [ ] T2 Restablecer estados iniciales
-      **Criterios de aceptación:**
+- [✔] T2 Restablecer estados iniciales
+  **Criterios de aceptación:**
   - ✔ El input vuelve a vacío
   - ✔ La casa vuelve a Gryffindor
   - ✔ El género vuelve al valor inicial

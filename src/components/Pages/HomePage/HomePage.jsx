@@ -9,6 +9,7 @@ const HomePage = ({
   onHouseChange,
   gender,
   onGenderChange,
+  onResetFilters,
 }) => {
   return (
     <>
@@ -26,6 +27,7 @@ const HomePage = ({
         onHouseChange={onHouseChange}
         gender={gender}
         onGenderChange={onGenderChange}
+        onResetFilters={onResetFilters}
       />
       <CharacterList characters={characters} search={search} />;
     </>

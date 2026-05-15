@@ -31,6 +31,12 @@ function App() {
     setGender(value);
   };
 
+  const handleResetFilters = () => {
+    setSearch('');
+    setHouse('gryffindor');
+    setGender('all');
+  };
+
   // SECCIÓN HELPERS
   const normalizeText = (text) => {
     return text
@@ -76,6 +82,7 @@ function App() {
                 onHouseChange={handleHouseChange}
                 gender={gender}
                 onGenderChange={handleGenderChange}
+                onResetFilters={handleResetFilters}
               />
             }
           />
