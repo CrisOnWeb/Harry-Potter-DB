@@ -8,14 +8,16 @@ const CharacterDetailPage = ({ getCharacterById }) => {
 
   return (
     <>
-      <header className="hero central-column">
-        <h2 className="hero__title">
-          <span className="hero__title--big">C</span>haracter{' '}
-          <span className="hero__title--big">P</span>rofile
-        </h2>
-        <p className="hero__text">
-          Explore detailed information about each Hogwarts character.
-        </p>
+      <header className="hero">
+        <div className="hero__inner central-column">
+          <h2 className="hero__title">
+            <span className="hero__title--big">C</span>haracter{' '}
+            <span className="hero__title--big">P</span>rofile
+          </h2>
+          <p className="hero__text">
+            Explore detailed information about each Hogwarts character.
+          </p>
+        </div>
       </header>
 
       <article className="detail">

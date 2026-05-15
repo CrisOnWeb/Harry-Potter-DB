@@ -206,8 +206,8 @@ PARA consultar información ampliada
   **Criterios de aceptación:**
   - ✔ Cada tarjeta navega a detalle
 
-- [ ] T3 Crear componente CharacterDetail
-      **Criterios de aceptación:**
+- [✔] T3 Crear componente CharacterDetail
+  **Criterios de aceptación:**
   - ✔ Existe un componente separado
 
 ---
@@ -222,12 +222,12 @@ PARA conocer más datos sobre él
 
 ### Tareas
 
-- [ ] T1 Mostrar imagen en detalle
-      **Criterios de aceptación:**
+- [✔] T1 Mostrar imagen en detalle
+  **Criterios de aceptación:**
   - ✔ La imagen aparece correctamente
 
-- [ ] T2 Mostrar datos del personaje
-      **Criterios de aceptación:**
+- [✔] T2 Mostrar datos del personaje
+  **Criterios de aceptación:**
   - ✔ Se muestra nombre
   - ✔ Se muestra casa
   - ✔ Se muestra estado vivo/muerto
@@ -244,7 +244,7 @@ PARA conocer más datos sobre él
 
 ## HU-10 Mantener filtros al volver atrás
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO mantener mi búsqueda al volver atrás  
@@ -252,8 +252,8 @@ PARA no perder el contexto de navegación
 
 ### Tareas
 
-- [ ] T1 Conservar estados de filtros
-      **Criterios de aceptación:**
+- [✔] T1 Conservar estados de filtros
+  **Criterios de aceptación:**
   - ✔ El texto buscado permanece
   - ✔ Los filtros permanecen
 

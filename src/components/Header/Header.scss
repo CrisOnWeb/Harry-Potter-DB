@@ -2,17 +2,13 @@
   border-bottom: 1px solid var(--border-color-subtle);
   background-color: var(--color-bg-primary);
   color: var(--color-accent-gold);
+  padding-block: var(--spacing-md);
+  padding-inline: var(--spacing-lg);
 
   &__inner {
     display: flex;
     gap: var(--spacing-sm);
     align-items: end;
-    padding-block: var(--spacing-md);
-    padding-inline: var(--spacing-lg);
-
-    @media (width > 1228px) {
-      padding-inline: 0;
-    }
   }
 
   &__logo {

@@ -1,10 +1,6 @@
 .hero {
-  padding-inline: var(--spacing-xl);
+  padding-inline: var(--spacing-lg);
   padding-top: var(--spacing-md);
-
-  @media (width > 1228px) {
-    padding-inline: 0;
-  }
 
   &__title {
     padding-bottom: var(--spacing-xs);
