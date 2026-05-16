@@ -1,10 +1,26 @@
 import { Link, useParams } from 'react-router-dom';
 import './CharacterDetailPage.scss';
+import GryffindorIcon from '../../../assets/Gryffindor.png';
+import SlytherinIcon from '../../../assets/Slytherin.webp';
+import RavenclawIcon from '../../../assets/Ravenclaw.webp';
+import HufflepuffIcon from '../../../assets/Hufflepuff.webp';
+import HeartIcon from '../../Icons/HeartIcon';
+import MoonIcon from '../../Icons/MoonIcon';
+import DefaultIcon from '../../Icons/DefaultIcon';
 
 const CharacterDetailPage = ({ getCharacterById }) => {
   const params = useParams();
 
   const characterFound = getCharacterById(params.id);
+
+  const houseIcons = {
+    gryffindor: GryffindorIcon,
+    slytherin: SlytherinIcon,
+    ravenclaw: RavenclawIcon,
+    hufflepuff: HufflepuffIcon,
+  };
+
+  const HouseIcon = houseIcons[characterFound.house.toLocaleLowerCase()];
 
   return (
     <>
@@ -50,11 +66,20 @@ const CharacterDetailPage = ({ getCharacterById }) => {
               </div>
               <div className="detail__item detail__item--small">
                 <dt className="detail__label">House</dt>
-                <dd className="detail__value">{characterFound.house}</dd>
+                <dd className="detail__value detail__value--with-icon">
+                 { HouseIcon ? <img
+                    className="emblem-icon"
+                    src={HouseIcon}
+                    alt=""
+                    aria-hidden="true"
+                  /> : <DefaultIcon />}
+                  {characterFound.house}
+                </dd>
               </div>
               <div className="detail__item detail__item--small">
                 <dt className="detail__label">Status</dt>
-                <dd className="detail__value">
+                <dd className="detail__value detail__value--with-icon">
+                  {characterFound.alive ? <HeartIcon /> : <MoonIcon />}
                   {characterFound.alive ? 'alive' : 'deceased'}
                 </dd>
               </div>

@@ -214,7 +214,7 @@ PARA consultar información ampliada
 
 ## HU-9 Mostrar información ampliada
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO ver información detallada del personaje  
@@ -236,8 +236,8 @@ PARA conocer más datos sobre él
   - ✔ Se muestra patronus
   - ✔ Se muestran nombres alternativos
 
-- [ ] T3 Mostrar emblema de casa
-      **Criterios de aceptación:**
+- [✔] T3 Mostrar emblema de casa
+  **Criterios de aceptación:**
   - ✔ Cada casa tiene su emblema correspondiente
 
 ---

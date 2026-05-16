@@ -77,6 +77,12 @@
 
   &__value {
     text-transform: capitalize;
+
+    &--with-icon {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
   }
 
   &__link {
@@ -110,4 +116,32 @@
 
 .hufflepuff {
   background-color: var(--color-hufflepuff);
+}
+
+.heart-icon {
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-accent-gold);
+}
+
+.moon-icon {
+  width: 23px;
+  height: 23px;
+  stroke: var(--color-accent-gold);
+  margin-right: 2px;
+}
+
+.emblem-icon {
+  width: 30px;
+  margin-right: 5px;
+
+  @media (width > 768px) {
+    width: 40px;
+  }
+}
+
+.default-icon {
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-accent-gold);
 }
