@@ -96,6 +96,7 @@ const Filters = ({
           </div>
           <button
             className="filters__reset-btn"
+            type="button"
             title="Reset the search fields"
             onClick={() => onResetFilters()}
           >
