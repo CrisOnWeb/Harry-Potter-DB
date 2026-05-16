@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import HomePage from './components/Pages/HomePage/HomePage';
 import CharacterDetail from './components/Pages/CharacterDetailPage/CharacterDetailPage';
+import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import getCharacters from './services/api';
 
 function App() {
@@ -100,6 +101,7 @@ function App() {
               />
             }
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
