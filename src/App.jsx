@@ -92,8 +92,13 @@ function App() {
             }
           />
           <Route
-            path={'/character/:id'}
-            element={<CharacterDetail getCharacterById={getCharacterById} />}
+            path={'/character/:house/:id'}
+            element={
+              <CharacterDetail
+                getCharacterById={getCharacterById}
+                onHouseChange={handleHouseChange}
+              />
+            }
           />
         </Routes>
       </main>

@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 import './CharacterDetailPage.scss';
 import GryffindorIcon from '../../../assets/Gryffindor.png';
 import SlytherinIcon from '../../../assets/Slytherin.webp';
@@ -8,10 +9,24 @@ import HeartIcon from '../../Icons/HeartIcon';
 import MoonIcon from '../../Icons/MoonIcon';
 import DefaultIcon from '../../Icons/DefaultIcon';
 
-const CharacterDetailPage = ({ getCharacterById }) => {
+const CharacterDetailPage = ({ getCharacterById, onHouseChange }) => {
   const params = useParams();
 
   const characterFound = getCharacterById(params.id);
+
+  useEffect(() => {
+    if (!characterFound) {
+      if (params.house === 'unknown') {
+        onHouseChange('all');
+      } else if (params.house !== 'gryffindor') {
+        onHouseChange(params.house);
+      }
+    }
+  }, [characterFound, params.house, onHouseChange]);
+
+  if (!characterFound) {
+    return <p className="detail__loading">Loading...</p>;
+  }
 
   const houseIcons = {
     gryffindor: GryffindorIcon,
@@ -20,7 +35,7 @@ const CharacterDetailPage = ({ getCharacterById }) => {
     hufflepuff: HufflepuffIcon,
   };
 
-  const HouseIcon = houseIcons[characterFound.house.toLocaleLowerCase()];
+  const HouseIcon = houseIcons[characterFound.house?.toLocaleLowerCase()];
 
   return (
     <>
@@ -67,12 +82,16 @@ const CharacterDetailPage = ({ getCharacterById }) => {
               <div className="detail__item detail__item--small">
                 <dt className="detail__label">House</dt>
                 <dd className="detail__value detail__value--with-icon">
-                 { HouseIcon ? <img
-                    className="emblem-icon"
-                    src={HouseIcon}
-                    alt=""
-                    aria-hidden="true"
-                  /> : <DefaultIcon />}
+                  {HouseIcon ? (
+                    <img
+                      className="emblem-icon"
+                      src={HouseIcon}
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <DefaultIcon />
+                  )}
                   {characterFound.house}
                 </dd>
               </div>

@@ -4,7 +4,10 @@ import Default from '../../assets/defaultCharacter.png';
 
 const CharacterCard = ({ character }) => {
   return (
-    <Link to={`/character/${character.id}`} className="characters__link">
+    <Link
+      to={`/character/${character.house.toLocaleLowerCase()}/${character.id}`}
+      className="characters__link"
+    >
       <img
         className="characters__img"
         src={character.image}
