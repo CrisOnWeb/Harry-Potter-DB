@@ -283,7 +283,7 @@ PARA entender el error de navegación
 
 ## HU-12 Mejorar la interfaz visual
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO una interfaz moderna y clara  
@@ -307,8 +307,8 @@ PARA tener una mejor experiencia visual
   - ✔ Se usa CSS Grid
   - ✔ Las tarjetas se adaptan al ancho
 
-- [ ] T4 Añadir estados hover/focus accesibles
-      **Criterios de aceptación:**
+- [✔] T4 Añadir estados hover/focus accesibles
+  **Criterios de aceptación:**
   - ✔ Existe feedback visual
   - ✔ Los focus son visibles
 

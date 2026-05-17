@@ -1,0 +1,23 @@
+.emblem-icon--large {
+  width: 30px;
+  margin-right: 5px;
+
+  @media (width > 768px) {
+    width: 40px;
+  }
+}
+
+.emblem-icon--small {
+  width: 20px;
+  margin-right: 5px;
+
+  @media (width > 768px) {
+    width: 25px;
+  }
+}
+
+.default-icon {
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-accent-gold);
+}

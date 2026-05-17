@@ -14,14 +14,21 @@
   --color-reset-btn: #374151;
 
   /* Casas Hogwarts */
+  /* colores */
   /* Gryffindor rojo/oro */
-  --color-gryffindor: rgba(116, 0, 2, 0.3);
+  --color-gryffindor: #cfa65a;
   /* Slytherin verde/plata */
-  --color-slytherin: rgba(3, 56, 7, 0.4);
+  --color-slytherin: #5fa77b;
   /* Ravenclaw azul/bronce */
-  --color-ravenclaw: rgba(0, 22, 94, 0.25);
+  --color-ravenclaw: rgba(33, 168, 213);
   /* Hufflepuff Amarillo/negro */
-  --color-hufflepuff: rgba(227, 159, 0, 0.15);
+  --color-hufflepuff: #e3c15a;
+
+  /* fondos */
+  --bg-gryffindor: rgba(116, 0, 2, 0.3);
+  --bg-slytherin: rgba(3, 56, 7, 0.4);
+  --bg-ravenclaw: rgba(0, 22, 94, 0.25);
+  --bg-hufflepuff: rgba(227, 159, 0, 0.15);
 
   /* Bordes */
   --border-color-subtle: rgba(255, 255, 255, 0.1);

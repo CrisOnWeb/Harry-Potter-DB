@@ -1,15 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import './CharacterDetailPage.scss';
-import GryffindorIcon from '../../../assets/Gryffindor.png';
-import SlytherinIcon from '../../../assets/Slytherin.webp';
-import RavenclawIcon from '../../../assets/Ravenclaw.webp';
-import HufflepuffIcon from '../../../assets/Hufflepuff.webp';
 import HeartIcon from '../../Icons/HeartIcon';
 import MoonIcon from '../../Icons/MoonIcon';
-import DefaultIcon from '../../Icons/DefaultIcon';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Spinner from '../../Spinner/Spinner';
+import HouseEmblem from '../../HouseEmblem/HouseEmblem';
 
 const CharacterDetailPage = ({
   getCharacterById,
@@ -43,15 +39,6 @@ const CharacterDetailPage = ({
   if (!characterFound) {
     return <NotFoundPage />;
   }
-
-  const houseIcons = {
-    gryffindor: GryffindorIcon,
-    slytherin: SlytherinIcon,
-    ravenclaw: RavenclawIcon,
-    hufflepuff: HufflepuffIcon,
-  };
-
-  const HouseIcon = houseIcons[characterFound.house?.toLocaleLowerCase()];
 
   return (
     <>
@@ -98,16 +85,7 @@ const CharacterDetailPage = ({
               <div className="detail__item detail__item--small">
                 <dt className="detail__label">House</dt>
                 <dd className="detail__value detail__value--with-icon">
-                  {HouseIcon ? (
-                    <img
-                      className="emblem-icon"
-                      src={HouseIcon}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <DefaultIcon />
-                  )}
+                  <HouseEmblem house={characterFound.house} size="large" />
                   {characterFound.house}
                 </dd>
               </div>

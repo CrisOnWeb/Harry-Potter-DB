@@ -49,4 +49,33 @@
     text-transform: uppercase;
     word-break: break-word;
   }
+
+  &__species {
+    color: var(--color-text-secondary);
+    text-transform: capitalize;
+  }
+
+  &__house {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+
+  &__gryffindor {
+    color: var(--color-gryffindor);
+  }
+
+  &__slytherin {
+    color: var(--color-slytherin);
+  }
+
+  &__ravenclaw {
+    color: var(--color-ravenclaw);
+  }
+
+  &__hufflepuff {
+    color: var(--color-hufflepuff);
+  }
 }

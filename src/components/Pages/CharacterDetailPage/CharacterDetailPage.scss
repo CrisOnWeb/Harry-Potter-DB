@@ -141,19 +141,19 @@
 }
 
 .gryffindor {
-  background-color: var(--color-gryffindor);
+  background-color: var(--bg-gryffindor);
 }
 
 .slytherin {
-  background-color: var(--color-slytherin);
+  background-color: var(--bg-slytherin);
 }
 
 .ravenclaw {
-  background-color: var(--color-ravenclaw);
+  background-color: var(--bg-ravenclaw);
 }
 
 .hufflepuff {
-  background-color: var(--color-hufflepuff);
+  background-color: var(--bg-hufflepuff);
 }
 
 .heart-icon {
@@ -167,19 +167,4 @@
   height: 23px;
   stroke: var(--color-accent-gold);
   margin-right: 2px;
-}
-
-.emblem-icon {
-  width: 30px;
-  margin-right: 5px;
-
-  @media (width > 768px) {
-    width: 40px;
-  }
-}
-
-.default-icon {
-  width: 25px;
-  height: 25px;
-  stroke: var(--color-accent-gold);
 }
