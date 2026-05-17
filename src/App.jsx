@@ -27,8 +27,17 @@ function App() {
 
     const localStorageCharacters = ls.get(`characters-${house}`, null);
 
-    // Recuperar del localStorage si existe
-    if (localStorageCharacters) {
+    // Creamos marca de tiempo para hacer fetch si los datos son antiguos
+    const localStorageTimestamp = ls.get(`characters-${house}-timestamp`, null);
+
+    const oneDayInMs = 24 * 60 * 60 * 1000;
+
+    // Comprobamos si no existe o es antiguo
+    const isExpired =
+      !localStorageTimestamp || Date.now() - localStorageTimestamp > oneDayInMs;
+
+    // Recuperar del localStorage si existe y no es antiguo
+    if (localStorageCharacters && !isExpired) {
       setCharacters(localStorageCharacters);
       setIsLoading(false);
     } else {
@@ -39,6 +48,13 @@ function App() {
           if (isCurrentRequest) {
             setCharacters(data);
             ls.set(`characters-${house}`, data);
+            ls.set(`characters-${house}-timestamp`, Date.now());
+          }
+        })
+        .catch((error) => {
+          if (isCurrentRequest) {
+            // eslint-disable-next-line no-console
+            console.error('Error fetching characters:', error);
           }
         })
         .finally(() => {
