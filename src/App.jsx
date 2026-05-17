@@ -7,6 +7,7 @@ import HomePage from './components/Pages/HomePage/HomePage';
 import CharacterDetail from './components/Pages/CharacterDetailPage/CharacterDetailPage';
 import NotFoundPage from './components/Pages/NotFoundPage/NotFoundPage';
 import getCharacters from './services/api';
+import ls from './services/localStorage';
 
 function App() {
   // SECCIÓN ESTADO
@@ -24,19 +25,29 @@ function App() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLoading(true);
 
-    getCharacters(house)
-      .then((data) => {
-        // Solo guardamos los datos si la petición no se ha cancelado/solapado con otra petición posterior
-        if (isCurrentRequest) {
-          setCharacters(data);
-        }
-      })
-      .finally(() => {
-        // Solo quitamos el spinner si esta era la última petición válida
-        if (isCurrentRequest) {
-          setIsLoading(false);
-        }
-      });
+    const localStorageCharacters = ls.get(`characters-${house}`, null);
+
+    // Recuperar del localStorage si existe
+    if (localStorageCharacters) {
+      setCharacters(localStorageCharacters);
+      setIsLoading(false);
+    } else {
+      // fetch
+      getCharacters(house)
+        .then((data) => {
+          // Solo guardamos los datos si la petición no se ha cancelado/solapado con otra petición posterior
+          if (isCurrentRequest) {
+            setCharacters(data);
+            ls.set(`characters-${house}`, data);
+          }
+        })
+        .finally(() => {
+          // Solo quitamos el spinner si esta era la última petición válida
+          if (isCurrentRequest) {
+            setIsLoading(false);
+          }
+        });
+    }
 
     // Esta función de limpieza se ejecuta automáticamente si 'house' cambia parando el proceso
     // Esto evita que salte la página NotFoundPage en CharacterDetailPage entre fetchs
