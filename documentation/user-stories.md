@@ -166,7 +166,7 @@ PARA acotar los resultados
 
 ## HU-7 Resetear filtros
 
-**Estado:** [✔] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO resetear los filtros  
@@ -190,7 +190,7 @@ PARA volver rápidamente al listado inicial
 
 ## HU-8 Navegar al detalle de personaje
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO acceder al detalle de un personaje  
@@ -198,8 +198,8 @@ PARA consultar información ampliada
 
 ### Tareas
 
-- [ ] T1 Configurar React Router
-      **Criterios de aceptación:**
+- [✔] T1 Configurar React Router
+  **Criterios de aceptación:**
   - ✔ Existen rutas funcionales
 
 - [✔] T2 Hacer tarjetas clicables
@@ -261,7 +261,7 @@ PARA no perder el contexto de navegación
 
 ## HU-11 Gestionar rutas inexistentes
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO usuaria  
 QUIERO recibir feedback si un personaje no existe  
@@ -269,12 +269,12 @@ PARA entender el error de navegación
 
 ### Tareas
 
-- [ ] T1 Detectar ID inexistente
-      **Criterios de aceptación:**
+- [✔] T1 Detectar ID inexistente
+  **Criterios de aceptación:**
   - ✔ Se detecta personaje inexistente
 
-- [ ] T2 Mostrar mensaje de error
-      **Criterios de aceptación:**
+- [✔] T2 Mostrar mensaje de error
+  **Criterios de aceptación:**
   - ✔ Se muestra mensaje claro
 
 ---
@@ -291,13 +291,13 @@ PARA tener una mejor experiencia visual
 
 ### Tareas
 
-- [ ] T1 Crear sistema de diseño
-      **Criterios de aceptación:**
+- [✔] T1 Crear sistema de diseño
+  **Criterios de aceptación:**
   - ✔ Existen variables CSS
   - ✔ Los colores son consistentes
 
-- [ ] T2 Crear layout responsive
-      **Criterios de aceptación:**
+- [✔] T2 Crear layout responsive
+  **Criterios de aceptación:**
   - ✔ Mobile funciona correctamente
   - ✔ Tablet funciona correctamente
   - ✔ Desktop funciona correctamente
@@ -334,8 +334,8 @@ PARA facilitar mantenimiento y escalabilidad
       **Criterios de aceptación:**
   - ✔ Los datos fluyen correctamente
 
-- [ ] T3 Usar destructuring
-      **Criterios de aceptación:**
+- [✔] T3 Usar destructuring
+  **Criterios de aceptación:**
   - ✔ Las props usan destructuring
 
 - [ ] T4 Mantener consola limpia

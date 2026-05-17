@@ -57,4 +57,30 @@
       font-weight: 600;
     }
   }
+
+  &__loading-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    min-height: 300px;
+    text-align: center;
+
+    @media (width > 768px) {
+      gap: var(--spacing-lg);
+    }
+  }
+
+  &__loading-text {
+    color: var(--color-accent-gold);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.85;
+
+    @media (width > 768px) {
+      font-size: 1.25rem;
+    }
+  }
 }

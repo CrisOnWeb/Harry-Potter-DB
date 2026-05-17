@@ -14,10 +14,35 @@ function App() {
   const [search, setSearch] = useState('');
   const [house, setHouse] = useState('gryffindor');
   const [gender, setGender] = useState('all');
+  const [isLoading, setIsLoading] = useState(true);
 
   // SECCIÓN USE-EFFECT
   useEffect(() => {
-    getCharacters(house).then((data) => setCharacters(data));
+    // Variable de control para saber si esta petición sigue siendo la válida o se ha solicitado un nuevo fetch
+    let isCurrentRequest = true;
+
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsLoading(true);
+
+    getCharacters(house)
+      .then((data) => {
+        // Solo guardamos los datos si la petición no se ha cancelado/solapado con otra petición posterior
+        if (isCurrentRequest) {
+          setCharacters(data);
+        }
+      })
+      .finally(() => {
+        // Solo quitamos el spinner si esta era la última petición válida
+        if (isCurrentRequest) {
+          setIsLoading(false);
+        }
+      });
+
+    // Esta función de limpieza se ejecuta automáticamente si 'house' cambia parando el proceso
+    // Esto evita que salte la página NotFoundPage en CharacterDetailPage entre fetchs
+    return () => {
+      isCurrentRequest = false;
+    };
   }, [house]);
 
   // SECCIÓN FUNCIONES DE EVENTOS
@@ -89,6 +114,7 @@ function App() {
                 gender={gender}
                 onGenderChange={handleGenderChange}
                 onResetFilters={handleResetFilters}
+                isLoading={isLoading}
               />
             }
           />
@@ -98,6 +124,8 @@ function App() {
               <CharacterDetail
                 getCharacterById={getCharacterById}
                 onHouseChange={handleHouseChange}
+                isLoading={isLoading}
+                currentHouse={house}
               />
             }
           />

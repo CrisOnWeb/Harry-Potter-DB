@@ -1,8 +1,9 @@
 import './CharacterList.scss';
 import { useId } from 'react';
 import CharacterCard from './CharacterCard';
+import Spinner from '../Spinner/Spinner';
 
-const CharacterList = ({ characters, search }) => {
+const CharacterList = ({ characters, search, isLoading }) => {
   const charactersID = useId();
   return (
     <section
@@ -15,7 +16,12 @@ const CharacterList = ({ characters, search }) => {
         <h3 className="characters__title" id={charactersID}>
           Characters
         </h3>
-        {search.trim() && characters.length === 0 ? (
+        {isLoading ? (
+          <div className="characters__loading-state">
+            <Spinner />
+            <p className="characters__loading-text">Loading characters...</p>
+          </div>
+        ) : search.trim() && characters.length === 0 ? (
           <p className="characters__empty">
             No characters found for{' '}
             <span className="characters__empty-search">

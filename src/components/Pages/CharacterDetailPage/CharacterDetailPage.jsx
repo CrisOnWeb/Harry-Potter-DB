@@ -8,8 +8,15 @@ import HufflepuffIcon from '../../../assets/Hufflepuff.webp';
 import HeartIcon from '../../Icons/HeartIcon';
 import MoonIcon from '../../Icons/MoonIcon';
 import DefaultIcon from '../../Icons/DefaultIcon';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import Spinner from '../../Spinner/Spinner';
 
-const CharacterDetailPage = ({ getCharacterById, onHouseChange }) => {
+const CharacterDetailPage = ({
+  getCharacterById,
+  onHouseChange,
+  isLoading,
+  currentHouse,
+}) => {
   const params = useParams();
 
   const characterFound = getCharacterById(params.id);
@@ -18,14 +25,23 @@ const CharacterDetailPage = ({ getCharacterById, onHouseChange }) => {
     if (!characterFound) {
       if (params.house === 'unknown') {
         onHouseChange('all');
-      } else if (params.house !== 'gryffindor') {
+      } else if (params.house !== currentHouse) {
         onHouseChange(params.house);
       }
     }
-  }, [characterFound, params.house, onHouseChange]);
+  }, [characterFound, params.house, currentHouse, onHouseChange]);
+
+  if (isLoading) {
+    return (
+      <div className="detail__loading-state" aria-live="polite">
+        <Spinner />
+        <p className="detail__loading-text">Loading character profile...</p>
+      </div>
+    );
+  }
 
   if (!characterFound) {
-    return <p className="detail__loading">Loading...</p>;
+    return <NotFoundPage />;
   }
 
   const houseIcons = {
