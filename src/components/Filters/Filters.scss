@@ -33,7 +33,7 @@
   &__form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 
     @media (width > 768px) {
       display: grid;
@@ -54,18 +54,16 @@
     }
   }
 
-  &__label {
-    font-size: 0.85rem;
-  }
-
   &__search,
   &__select {
+    width: 100%;
     padding-inline: var(--spacing-sm);
     padding-block: var(--spacing-sm);
     border: 1px solid var(--border-color-subtle);
     border-radius: 5px;
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
+    font-size: 1rem;
     transition: border 0.15s ease-in;
   }
 
