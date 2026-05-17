@@ -16,6 +16,7 @@ function App() {
   const [house, setHouse] = useState('gryffindor');
   const [gender, setGender] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   // SECCIÓN USE-EFFECT
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
     if (localStorageCharacters && !isExpired) {
       setCharacters(localStorageCharacters);
       setIsLoading(false);
+      setHasError(false);
     } else {
       // fetch
       getCharacters(house)
@@ -55,6 +57,7 @@ function App() {
           if (isCurrentRequest) {
             // eslint-disable-next-line no-console
             console.error('Error fetching characters:', error);
+            setHasError(true);
           }
         })
         .finally(() => {
@@ -142,6 +145,7 @@ function App() {
                 onGenderChange={handleGenderChange}
                 onResetFilters={handleResetFilters}
                 isLoading={isLoading}
+                hasError={hasError}
               />
             }
           />
@@ -153,6 +157,7 @@ function App() {
                 onHouseChange={handleHouseChange}
                 isLoading={isLoading}
                 currentHouse={house}
+                hasError={hasError}
               />
             }
           />

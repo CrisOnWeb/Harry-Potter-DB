@@ -6,12 +6,14 @@ import MoonIcon from '../../Icons/MoonIcon';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Spinner from '../../Spinner/Spinner';
 import HouseEmblem from '../../HouseEmblem/HouseEmblem';
+import ErrorMessage from '../../ErrorMessage/ErrorMessage';
 
 const CharacterDetailPage = ({
   getCharacterById,
   onHouseChange,
   isLoading,
   currentHouse,
+  hasError,
 }) => {
   const params = useParams();
 
@@ -27,33 +29,23 @@ const CharacterDetailPage = ({
     }
   }, [characterFound, params.house, currentHouse, onHouseChange]);
 
+  if (!isLoading && !hasError && !characterFound) {
+    return <NotFoundPage />;
+  }
+
+  let content;
+
   if (isLoading) {
-    return (
+    content = (
       <div className="detail__loading-state" aria-live="polite">
         <Spinner />
         <p className="detail__loading-text">Loading character profile...</p>
       </div>
     );
-  }
-
-  if (!characterFound) {
-    return <NotFoundPage />;
-  }
-
-  return (
-    <>
-      <header className="hero">
-        <div className="hero__inner central-column">
-          <h2 className="hero__title">
-            <span className="hero__title--big">C</span>haracter{' '}
-            <span className="hero__title--big">P</span>rofile
-          </h2>
-          <p className="hero__text">
-            Explore detailed information about each Hogwarts character.
-          </p>
-        </div>
-      </header>
-
+  } else if (hasError) {
+    content = <ErrorMessage />;
+  } else {
+    content = (
       <article className="detail">
         <div
           className={`detail__inner central-column ${characterFound.house.toLocaleLowerCase()}`}
@@ -98,12 +90,28 @@ const CharacterDetailPage = ({
               </div>
             </dl>
             <Link className="detail__link" to="/">
-              {' '}
               &laquo; Back to the list
             </Link>
           </section>
         </div>
       </article>
+    );
+  }
+
+  return (
+    <>
+      <header className="hero">
+        <div className="hero__inner central-column">
+          <h2 className="hero__title">
+            <span className="hero__title--big">C</span>haracter{' '}
+            <span className="hero__title--big">P</span>rofile
+          </h2>
+          <p className="hero__text">
+            Explore detailed information about each Hogwarts character.
+          </p>
+        </div>
+      </header>
+      {content}
     </>
   );
 };

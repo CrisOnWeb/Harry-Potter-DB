@@ -10,6 +10,7 @@ const HomePage = ({
   onGenderChange,
   onResetFilters,
   isLoading,
+  hasError,
 }) => {
   return (
     <>
@@ -35,6 +36,7 @@ const HomePage = ({
         characters={characters}
         search={search}
         isLoading={isLoading}
+        hasError={hasError}
       />
     </>
   );
