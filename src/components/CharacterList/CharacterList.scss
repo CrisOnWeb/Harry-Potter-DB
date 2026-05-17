@@ -42,6 +42,14 @@
     background-color: var(--color-bg-card);
     width: 100%;
     max-width: 420px;
+    transition:
+      transform 0.2s ease-in-out,
+      border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--color-accent-gold);
+    }
   }
 
   &__empty {

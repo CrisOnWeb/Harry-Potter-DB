@@ -318,7 +318,7 @@ PARA tener una mejor experiencia visual
 
 ## HU-13 Mantener código limpio y mantenible
 
-**Estado:** [ ] pendiente
+**Estado:** [✔]
 
 COMO desarrolladora  
 QUIERO una arquitectura limpia  
@@ -326,19 +326,19 @@ PARA facilitar mantenimiento y escalabilidad
 
 ### Tareas
 
-- [ ] T1 Separar componentes correctamente
-      **Criterios de aceptación:**
+- [✔] T1 Separar componentes correctamente
+  **Criterios de aceptación:**
   - ✔ Cada componente tiene una responsabilidad clara
 
-- [ ] T2 Usar props correctamente
-      **Criterios de aceptación:**
+- [✔] T2 Usar props correctamente
+  **Criterios de aceptación:**
   - ✔ Los datos fluyen correctamente
 
 - [✔] T3 Usar destructuring
   **Criterios de aceptación:**
   - ✔ Las props usan destructuring
 
-- [ ] T4 Mantener consola limpia
-      **Criterios de aceptación:**
+- [✔] T4 Mantener consola limpia
+  **Criterios de aceptación:**
   - ✔ No existen errores
   - ✔ No existen warnings
