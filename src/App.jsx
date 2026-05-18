@@ -161,7 +161,15 @@ function App() {
               />
             }
           />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route
+            path="*"
+            element={
+              <NotFoundPage
+                text="A confused house-elf may have misplaced this page somewhere in the
+            castle."
+              />
+            }
+          />
         </Routes>
       </main>
       <Footer />

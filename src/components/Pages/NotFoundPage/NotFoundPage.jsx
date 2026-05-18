@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './NotFoundPage.scss';
 import ErrorImg from '../../../assets/error404.png';
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ text }) => {
   return (
     <>
       <header className="hero">
@@ -25,10 +25,7 @@ const NotFoundPage = () => {
             alt="House-elf holding a broom next to a magical error scroll and books"
           />
           <h3 className="not-found__title">Mischief managed... badly</h3>
-          <p className="not-found__text">
-            A confused house-elf may have misplaced this page somewhere in the
-            castle.
-          </p>
+          <p className="not-found__text">{text}</p>
           <Link className="not-found__link" to="/">
             &laquo;Back to character directory
           </Link>

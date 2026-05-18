@@ -30,7 +30,9 @@ const CharacterDetailPage = ({
   }, [characterFound, params.house, currentHouse, onHouseChange]);
 
   if (!isLoading && !hasError && !characterFound) {
-    return <NotFoundPage />;
+    return (
+      <NotFoundPage text="No records of this character were found in the Hogwarts archives." />
+    );
   }
 
   let content;
