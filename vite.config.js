@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'docs',
   },
   // Modificar el nombre para cada repositorio con el nombre del repositorio de GitHub al que vas hacer GitHub Pages
-  base: '/',
+  base: '/modulo-3-evaluacion-final-CrisOnWeb/',
   plugins: [react()],
   server: {
     open: true,
