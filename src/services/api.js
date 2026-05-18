@@ -8,7 +8,7 @@ const getCharacters = (house) => {
   )
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Error en la petición');
+        throw new Error(`Request failed with status ${response.status}`);
       }
       return response.json();
     })
